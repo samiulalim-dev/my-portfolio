@@ -1,5 +1,12 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaMedium,
+  FaDev,
+} from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
 
 const Footer = () => {
@@ -12,9 +19,9 @@ const Footer = () => {
         </p>
 
         {/* Center: Social Icons */}
-        <div className="flex space-x-6 z-10 text-xl">
+        <div className="flex space-x-6 text-3xl z-10 ">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/samiulalim-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-black transition-colors"
@@ -23,7 +30,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/samiul-alim-cse/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-200 transition-colors"
@@ -32,17 +39,18 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://twitter.com/your-twitter-handle"
+            href="https://dev.to/samiul_alim"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-300 transition-colors"
-            aria-label="Twitter"
+            className="hover:text-black  transition-colors"
+            aria-label="LinkedIn"
           >
-            <FaTwitter />
+            <FaDev />
           </a>
+
           <a
             href="mailto:samiulalim.dev@gmail.com"
-            className="hover:text-[#f339002d] transition-colors"
+            className="hover:text-red-700 transition-colors"
             aria-label="Email"
           >
             <FaEnvelope />

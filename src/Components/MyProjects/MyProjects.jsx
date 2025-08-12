@@ -3,13 +3,12 @@ import ProjectDescription from "./ProjectDescription/ProjectDescription";
 const projects = [
   {
     id: 1,
-    name: "Virtual Bookshelf",
+    name: "Daily Market BD ",
     description:
-      "A responsive web application that helps book lovers manage, review, and track their reading journey in a user-friendly way. Users can add books, track their reading progress, write reviews, and discover books added by others.",
-    image:
-      "https://images-production.bookshop.org/spree/lists/hero_images/31252/original/IMG_9687.jpg?1592843990",
-    liveLink: "https://bookshelf-web-app-client.netlify.app/",
-    githubLink: "https://github.com/samiulalim-dev/bookshelf-web-app-client/",
+      "A full-stack web application to track and manage daily prices of fresh produce and essentials from local markets across Bangladesh.",
+    image: "https://i.postimg.cc/Dz24WNCw/veg2.png",
+    liveLink: "https://daily-market-bd.netlify.app/",
+    githubLink: "https://github.com/samiulalim-dev/daily-market-bd-client/",
   },
   {
     id: 2,
@@ -36,7 +35,7 @@ const MyProjects = () => {
   return (
     <section id="projects" className="py-16  text-white">
       <div className="w-11/12 mx-auto">
-        <h2 className="text-4xl font-bold mb-8  ">
+        <h2 className=" text-3xl md:text-4xl font-bold mb-8  ">
           <div className="flex items-center gap-2">
             {/* Left Gradient Arrow */}
             <span className=" text-[#a855f7]">
@@ -44,7 +43,7 @@ const MyProjects = () => {
             </span>
 
             {/* Text */}
-            <span className="text-white">My Projects</span>
+            <span className="text-white ">My Projects</span>
 
             {/* Right Gradient Arrow */}
             <span className=" text-[#a855f7]">

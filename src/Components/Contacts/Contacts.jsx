@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 bg-[#0a0a23] text-white">
       <div>
-        <h2 className="text-4xl w-11/12 mx-auto font-bold mb-8  ">
+        <h2 className="text-3xl md:text-4xl w-11/12 mx-auto font-bold mb-8  ">
           <div className="flex items-center gap-2">
             {/* Horizontal Gradient Line */}
             <span
@@ -86,7 +86,7 @@ const Contact = () => {
                 </a>
               </p>
               <p>
-                <strong>Whats App:</strong>{" "}
+                <strong>WhatsApp:</strong>{" "}
                 <a
                   href="tel:+880140279198"
                   className="text-indigo-400 hover:underline"

@@ -36,8 +36,8 @@ const Banner = () => {
           </p>
           <div className="flex gap-4">
             <a
-              href="#portfolio"
-              className="px-6 py-2 sm:py-3 rounded-lg bg-black relative
+              href="#projects"
+              className="px-4 py-2 sm:py-3 rounded-lg bg-black relative
              before:absolute before:inset-0 before:rounded-lg before:p-[2px]
              before:bg-gradient-to-r before:from-indigo-500 before:to-pink-500
              before:-z-10
@@ -47,7 +47,7 @@ const Banner = () => {
               View Projects <FiExternalLink />
             </a>
             <a
-              href="#portfolio"
+              href="#contact"
               className="px-4 py-2 sm:py-3 rounded-lg bg-black relative
              before:absolute before:inset-0 before:rounded-lg before:p-[2px]
              before:bg-gradient-to-r before:from-indigo-500 before:to-pink-500

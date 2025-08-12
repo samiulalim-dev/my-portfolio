@@ -26,7 +26,11 @@ const Navbar = () => {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
-    { href: "", target: "_blank", label: "Resume" },
+    {
+      href: "https://github.com/samiulalim-dev/",
+      target: "_blank",
+      label: "Resume",
+    },
   ];
 
   return (
