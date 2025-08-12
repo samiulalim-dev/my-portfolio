@@ -1,9 +1,11 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
+import { Outlet } from "react-router";
+import Footer from "../Components/Footer/Footer";
 
 const Roots = () => {
   return (
-    <div className="relative w-full  overflow-hidden bg-[#010212]">
+    <div className="relative w-full  bg-[#0a0a23]">
       <div
         className="absolute inset-0  pointer-events-none"
         style={{
@@ -12,8 +14,16 @@ const Roots = () => {
           backgroundSize: "30px 30px",
         }}
       ></div>
-      <div>
-        <Navbar></Navbar>
+      <div className=" ">
+        <div className=" sticky  top-0 z-50">
+          <Navbar></Navbar>
+        </div>
+        <div>
+          <Outlet></Outlet>
+        </div>
+        <div>
+          <Footer></Footer>
+        </div>
       </div>
     </div>
   );

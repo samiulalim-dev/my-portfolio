@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router";
 import logo from "../../assets/myLogo.png";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,14 +24,22 @@ const Navbar = () => {
   const links = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
+    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
+    { href: "", target: "_blank", label: "Resume" },
   ];
 
   return (
-    <nav className=" text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6  lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+    <nav
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+        backgroundSize: "30px 30px",
+      }}
+      className=" text-white bg-[#0a0a23]  w-full"
+    >
+      <div className="sm:w-11/12  sm:mx-auto px-4 sm:px-0">
+        <div className="flex justify-between h-18 items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center ">
             <img src={logo} alt="Logo" className="w-16  h-auto py-5" />
@@ -42,12 +53,14 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-8 text-lg font-medium">
-            {links.map(({ href, label }) => {
+            {links.map(({ href, label, target }) => {
               const isActive = activeHash === href;
               return (
                 <a
                   key={href}
                   href={href}
+                  target={target || "_self"}
+                  rel={target === "_blank" ? "noopener noreferrer" : undefined}
                   className={`relative transition-colors
               ${
                 isActive
@@ -77,31 +90,41 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-4 py-4 space-y-4 font-semibold flex flex-col text-lg">
-          {links.map(({ href, label }) => {
-            const isActive = activeHash === href;
-            return (
-              <a
-                key={href}
-                href={href}
-                className={`relative transition-colors
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden px-6 py-6 space-y-4 font-semibold flex flex-col text-lg "
+          >
+            {links.map(({ href, label, target }) => {
+              const isActive = activeHash === href;
+              return (
+                <a
+                  key={href}
+                  href={href}
+                  target={target || "_self"}
+                  rel={target === "_blank" ? "noopener noreferrer" : undefined}
+                  className={`relative transition-colors duration-300
               ${
                 isActive
-                  ? "text-indigo-400 after:scale-x-20"
+                  ? "text-indigo-400 after:scale-x-100"
                   : "text-white hover:text-indigo-400 after:scale-x-0 hover:after:scale-x-100"
               }
-              after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full
+              after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full
               after:bg-gradient-to-r after:from-[#6366f1] after:to-pink-500
               after:origin-left after:transition-transform after:duration-300
-              `}
-              >
-                {label}
-              </a>
-            );
-          })}
-        </div>
-      )}
+            `}
+                >
+                  {label}
+                </a>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
