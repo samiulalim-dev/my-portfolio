@@ -4,6 +4,7 @@ import About from "../../Components/About/About";
 import Skills from "../../Components/Skills/Skills";
 import MyProjects from "../../Components/MyProjects/MyProjects";
 import Contact from "../../Components/Contacts/Contacts";
+import Education from "../../Components/Educations/Educations";
 
 const Home = () => {
   return (
@@ -14,9 +15,12 @@ const Home = () => {
       <div data-aos="fade-up">
         <About></About>
       </div>
-      <div data-aos="zoom-up" data-aos-delay="200" data-aos-duration="1500">
+      <div data-aos="fade-up">
         <Skills></Skills>
       </div>
+      {/* <div data-aos="fade-up">
+        <Education></Education>
+      </div> */}
       <div data-aos="fade-up">
         <MyProjects></MyProjects>
       </div>

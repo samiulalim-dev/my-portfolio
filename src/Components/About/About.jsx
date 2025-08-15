@@ -44,7 +44,7 @@ const About = () => {
               Hi! I’m <strong>Samiul Alim</strong>, a passionate MERN stack web
               developer who loves building fast, scalable, and user-friendly web
               applications. I am currently pursuing a degree in Computer Science
-              & Engineering and continuously improving my skills in frontend and
+              & Technology and continuously improving my skills in frontend and
               backend development.
             </p>
             <p className="text-lg leading-relaxed">

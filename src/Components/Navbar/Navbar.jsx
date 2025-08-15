@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router";
 import logo from "../../assets/myLogo.png";
 import { AnimatePresence } from "framer-motion";
@@ -29,7 +29,11 @@ const Navbar = () => {
     {
       href: "https://github.com/samiulalim-dev/",
       target: "_blank",
-      label: "Resume",
+      label: (
+        <span className="flex items-center gap-1">
+          Resume <FaArrowDown />
+        </span>
+      ),
     },
   ];
 

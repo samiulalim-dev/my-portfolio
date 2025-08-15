@@ -15,8 +15,7 @@ const projects = [
     name: "ProFast",
     description:
       "ProFast is a modern, feature-rich courier service web application built with React, Firebase Authentication, and Tailwind CSS. Users can send parcels, track deliveries, and riders/admins can manage parcels and earnings.",
-    image:
-      "https://static.vecteezy.com/system/resources/previews/004/379/352/non_2x/delivery-van-driver-with-parcels-flat-character-courier-postman-deliveryman-holding-cardboard-boxes-and-order-receipt-isolated-cartoon-illustration-on-white-background-shipping-service-transport-vector.jpg",
+    image: "https://i.postimg.cc/FsbD27Bd/banner2.png",
     liveLink: "https://zap-shift-web.netlify.app/",
     githubLink: "https://github.com/samiulalim-dev/zap-shift-client-side/",
   },
